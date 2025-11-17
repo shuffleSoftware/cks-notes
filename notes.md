@@ -6,8 +6,18 @@
     - journalctl -u unut
     - journalctl | grep unit
 [x] API Server missconfigured
-[ ] API Server NodeRestriction
-[ ] AppArmor
+[x] API Server NodeRestriction
+    - [x] What the NodeRestriction does? 
+        - node-restriction.kubernetes.io label is reserved for administrators to 
+          label their Node objects for workload isolation purposes, and kubelets 
+          will not be allowed to modify labels with that prefix.
+        - https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#noderestriction
+[x] AppArmor
+    - [ ] do tutorials on AppArmor
+        - apparmor_parser /root/profile
+        - aa-status | grep nginx
+    - apparmor_status
+    - k explain deploy.spec.template.spec.securityContext.appArmorProfile   
 [ ] Auditing Enable Audit Logging
 [ ] CertificateSigningRequest sign manually
 [ ] CertificateSigningRequests sign via API
