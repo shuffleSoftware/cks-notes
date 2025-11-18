@@ -12,15 +12,33 @@
           label their Node objects for workload isolation purposes, and kubelets 
           will not be allowed to modify labels with that prefix.
         - https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#noderestriction
-[x] AppArmor
+[REDO] AppArmor
     - [ ] do tutorials on AppArmor
         - apparmor_parser /root/profile
         - aa-status | grep nginx
     - apparmor_status
     - k explain deploy.spec.template.spec.securityContext.appArmorProfile   
-[ ] Auditing Enable Audit Logging
-[ ] CertificateSigningRequest sign manually
-[ ] CertificateSigningRequests sign via API
+[REDO] Auditing Enable Audit Logging
+    - Important to set the flag names correctly
+    - REDO
+    - REDO
+[REDO] CertificateSigningRequest sign manually
+    - SOLUTION 1
+        - openssl genrsa -out 60099.key 2048
+        - openssl req -new -key 60099.key -out 60099.crt 
+        - openssl x509 -req -in 60099.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out 60099.crt -days 500 
+    - SOLUTION 2
+        - k config set-credentials 60099@internal.users --client-key=60099.key --client-certificate=60099.crt
+        - k config set-context 60099@internal.users --cluster=kubernetes --user=60099@internal.users
+        - k config get-contexts
+        - k config use-context 60099@internal.users  
+        - k get ns
+[REDO] CertificateSigningRequests sign via API
+    - k get csr - get jsonoath for status.CRT
+    - k config set-credential 60099@internal.users --client-key=60099.key --client-certificate=60099.crt
+    - k config set-context 60099@internal.users --cluster=kubernetes --user=60099@internal.users
+    - k config use-context 60099@internal.users
+    - k get ns # won' work but the right error appears
 [ ] CIS Benchmarks fix Controlplane
 [ ] Container Hardening
 [ ] Container Image Footprint User
