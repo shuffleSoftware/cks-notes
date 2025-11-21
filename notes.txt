@@ -18,7 +18,7 @@
         - aa-status | grep nginx
     - apparmor_status
     - k explain deploy.spec.template.spec.securityContext.appArmorProfile   
-[REDO] Auditing Enable Audit Logging
+[x] Auditing Enable Audit Logging
     - Important to set the flag names correctly
     - REDO
     - REDO
