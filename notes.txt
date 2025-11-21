@@ -45,7 +45,8 @@
 [ ] Image Use Digest
 [ ] Image Vulnerability Scanning Trivy
 [ ] Immutability Readonly Filesystem
-[ ] Ingress Create
+[x] Ingress Create
+    - easy one, keep in mind Prefix type
 [ ] Ingress Secure
 [ ] NetworkPolicy Create Default Deny
 [ ] NetworkPolicy Metadata Protection
