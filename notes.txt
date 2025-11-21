@@ -51,7 +51,8 @@
     - openssl req -x509 -nodes -days 365 \
       -newkey rsa:2048 -keyout cert.key \
       -out cert.crt -subj "/CN=my.domain.com/O=my.domain.com"
-[ ] NetworkPolicy Create Default Deny
+[x] NetworkPolicy Create Default Deny
+    - Make sure only needed 'policyTypes' are explicitely set
 [ ] NetworkPolicy Metadata Protection
 [ ] NetworkPolicy Namespace Selector
 [ ] Privilege Escalation Containers
