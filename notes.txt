@@ -20,8 +20,6 @@
     - k explain deploy.spec.template.spec.securityContext.appArmorProfile   
 [x] Auditing Enable Audit Logging
     - Important to set the flag names correctly
-    - REDO
-    - REDO
 [x] CertificateSigningRequest sign manually
     - SOLUTION 1
         - openssl genrsa -out 60099.key 2048
