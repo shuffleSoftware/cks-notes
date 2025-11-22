@@ -65,6 +65,8 @@
 [ ] Sandbox gVisor
 [ ] Secret ETCD Encryption
 [x] Secret Access in PODS   
+    - Quiet easy, remember to test and pay attention to secret as volume
+      especially when it mounts as a file path, i.e. /etc/hosts will be volumeMounts[n].mountPath: /etc/
 [ ] Secret Read and Decode
 [x] Secret ServiceAccount Pod
     - k explain very handy
