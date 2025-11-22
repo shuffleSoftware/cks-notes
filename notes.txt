@@ -72,7 +72,8 @@
 [x] Secret ServiceAccount Pod
     - k explain very handy
     - k run my-pod --dry-run=client -o yaml > pod.yaml  
-[ ] ServiceAccount Token Mounting
+[x] ServiceAccount Token Mounting
+    - quiet easy
 [ ] Static Manual Analysis Docker
 [x] Static Manual Analysis K8s
     - securityContext 
