@@ -67,7 +67,8 @@
 [x] Secret Access in PODS   
     - Quiet easy, remember to test and pay attention to secret as volume
       especially when it mounts as a file path, i.e. /etc/hosts will be volumeMounts[n].mountPath: /etc/
-[ ] Secret Read and Decode
+[x] Secret Read and Decode
+    - Very handy to work with --field-selector + -o jsonpath + jq for several items 
 [x] Secret ServiceAccount Pod
     - k explain very handy
     - k run my-pod --dry-run=client -o yaml > pod.yaml  
