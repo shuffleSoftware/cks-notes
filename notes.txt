@@ -53,10 +53,11 @@
       -out cert.crt -subj "/CN=my.domain.com/O=my.domain.com"
 [x] NetworkPolicy Create Default Deny
     - Make sure only needed 'policyTypes' are explicitely set
-[ ] NetworkPolicy Metadata Protection
+[x] NetworkPolicy Metadata Protection
     - Documentation k explain netpol.spec.egress.to.ipBlock should be <[]IPBlock> not <IPBlock>
     - submitted https://github.com/kubernetes/website/issues/53369#issuecomment-3564976108
-[ ] NetworkPolicy Namespace Selector
+[x] NetworkPolicy Namespace Selector
+    - Easy, rememer again to specify **policyTypes**  
 [ ] Privilege Escalation Containers
 [ ] Privileged Containers
 [ ] RBAC ServiceAccount Permissions
