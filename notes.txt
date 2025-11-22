@@ -58,7 +58,8 @@
     - submitted https://github.com/kubernetes/website/issues/53369#issuecomment-3564976108
 [x] NetworkPolicy Namespace Selector
     - Easy, rememer again to specify **policyTypes**  
-[ ] Privilege Escalation Containers
+[x] Privilege Escalation Containers
+    - k explain useful
 [ ] Privileged Containers
 [ ] RBAC ServiceAccount Permissions
 [ ] RBAC User Permissions
