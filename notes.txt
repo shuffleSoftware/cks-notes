@@ -73,8 +73,11 @@
     - k explain very handy
     - k run my-pod --dry-run=client -o yaml > pod.yaml  
 [x] ServiceAccount Token Mounting
-    - quiet easy
-[ ] Static Manual Analysis Docker
+    - quiet easy, k explain
+[x] Static Manual Analysis Docker
+    - Mostly checking Dockerfiles
+    - User creation
+    - ENV exposure
 [x] Static Manual Analysis K8s
     - securityContext 
     - dropCapabilities 
